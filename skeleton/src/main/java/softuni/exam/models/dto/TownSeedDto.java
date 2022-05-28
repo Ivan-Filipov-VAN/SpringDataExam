@@ -1,0 +1,24 @@
+package softuni.exam.models.dto;
+
+import com.google.gson.annotations.Expose;
+
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
+public class TownSeedDto {
+
+    @Expose
+    private String townName;
+    @Expose
+    private Integer population;
+
+    @Size(min = 2)
+    public String getTownName() {
+        return townName;
+    }
+
+    @Positive
+    public Integer getPopulation() {
+        return population;
+    }
+}
